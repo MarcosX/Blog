@@ -1,4 +1,4 @@
 source :rubygems
 
-gem 'rack-jekyll', :git => 'https://github.com/adaoraul/rack-jekyll'
+gem 'rack-jekyll'
 gem 'unicorn'
