@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/himynameisjonas/rack-jekyll.git
+  revision: deb3360f21e1b43886dd10758ac5560fa6fd70f8
+  specs:
+    rack-jekyll (0.3.7)
+      jekyll (~> 0.11.0)
+      rack (~> 1.3.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -21,10 +29,7 @@ GEM
     maruku (0.6.1)
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
-    rack (1.4.1)
-    rack-jekyll (0.3.5)
-      jekyll
-      rack
+    rack (1.3.6)
     raindrops (0.10.0)
     rdiscount (1.6.8)
     syntax (1.0.0)
@@ -38,6 +43,6 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  rack-jekyll
+  rack-jekyll!
   rdiscount
   unicorn
