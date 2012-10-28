@@ -3,9 +3,9 @@ layout: default
 title: Hello World
 ---
 <div class='continer'>
-  <div class='span10 hero-unit'>
+  <div class='span10'>
     {% for post in site.posts %}
-    <article>
+    <article class='well'>
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <section>
         <span class="label label-info">{{ post.date | date: "%B %e, %Y" }}</span>
