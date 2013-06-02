@@ -2,14 +2,40 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Arcanum | {{ page.title }}</title>
+    <title>Arcanum | Padrões de Projeto</title>
     <link href="/css/readable.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/solarized_light.css">
   </head>
   <body>
-    {% include navbar.html %}
+    <div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">Arcanum</a>
+    <ul class="nav">
+      <li id="patterns"><a href="/patterns.html">Padrões de Projeto</a></li>
+      <li id="about"><a href="/about.html">Sobre</a></li>
+    </ul>
+  </div>
+</div>
+
+
     <div class="span10">
-      {{ content }}
+      <h1>Padrões de Projeto</h1>
+
+<div class='thumbnails'>
+  <div class='span4'>
+    
+    <article class='well'>
+      <h3><a href="/2013/06/02/factory-method.html">Factory Method</a></h3>
+      <section>
+        <p>Criando objetos on the fly com alta flexibilidade!</p>
+      </section>
+    </article>
+    
+  </div>
+  <div class='span2'>
+  </div>
+</div>
+
     </div>
 
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
