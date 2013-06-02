@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Arcanum | Welcome</title>
+    <title>Arcanum | Página inicial</title>
     <link href="/css/readable.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/solarized_light.css">
     <script src="/js/highlight.pack.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
@@ -13,10 +14,21 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Arcanum</a>
     <ul class="nav">
-      <li class="active"><a href="/">Home</a></li>
+      <li id="home"><a href="/">Home</a></li>
+      <li id="about"><a href="/about.html">Sobre</a></li>
     </ul>
   </div>
 </div>
+
+<script>
+$( document ).ready(function() {
+    if(document.URL.match(/about/)){
+      $("#about").addClass("active");
+    } else {
+      $("#home").addClass("active");
+    }
+});
+</script>
 
     <div style="padding-left:5%">
     <div class='thumbnails'>
@@ -25,8 +37,7 @@
     <article class='well'>
       <h3><a href="/2013/06/02/factory-method.html">Factory Method</a></h3>
       <section>
-        <span class="label label-info">June  2, 2013</span>
-        
+        <p>Criando objetos on the fly com alta flexibilidade!</p>
       </section>
     </article>
     

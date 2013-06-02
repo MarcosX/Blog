@@ -6,6 +6,7 @@
     <link href="/css/readable.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/solarized_light.css">
     <script src="/js/highlight.pack.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
@@ -13,10 +14,21 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Arcanum</a>
     <ul class="nav">
-      <li class="active"><a href="/">Home</a></li>
+      <li id="home"><a href="/">Home</a></li>
+      <li id="about"><a href="/about.html">Sobre</a></li>
     </ul>
   </div>
 </div>
+
+<script>
+$( document ).ready(function() {
+    if(document.URL.match(/about/)){
+      $("#about").addClass("active");
+    } else {
+      $("#home").addClass("active");
+    }
+});
+</script>
 
     <div style="padding-left:5%">
     <div class="well span10">
@@ -143,7 +155,7 @@ public class FabricaFiat implements FabricaDeCarro {
 
 <p>Ou seja, no final das contas teríamos a seguinte estrutura:</p>
 
-<p><img src="http://brizeno.files.wordpress.com/2011/09/factory-method.png" alt="Diagrama UML Factory Method" /></p>
+<p><img src="http://brizeno.files.wordpress.com/2011/09/factory-method.png" class="img-polaroid" alt="Diagrama de classe Factory Method"/></p>
 
 <h2>Um pouco de teoria</h2>
 
@@ -152,14 +164,6 @@ public class FabricaFiat implements FabricaDeCarro {
 <p>No entanto isto tem um custo. Perceba que criamos uma estrutura relativamente grande para resolver o pequeno problema, temos um conjunto grande de pequenas classes, cada uma realizando uma operação simples. Apesar de seguir o princípio da responsabilidade única, para cada novo produto precisamos sempre criar duas classes, uma produto e uma fábrica.</p>
 
 <p>Na primeira sugestão de implementação nós definimos o Factory Method em uma classe concreta, isso evita a criação de várias classes pequenas de fábrica, no entanto acaba criando um código gigante para criação de objetos. Durante a implementação é necessário escolher qual tipo de implementação resolve melhor o seu problema.</p>
-
-<h2>Código fonte completo</h2>
-
-<p>O código completo pode ser baixado no seguinte repositório Git: https://github.com/MarcosX/Padr-es-de-Projeto.</p>
-
-<p>Os arquivos estão como um projeto do eclipse, então basta colocar no seu Workspace e fazer o import.</p>
-
-<p>Se gostou do post compartilhe com seus amigos e colegas, senão, comente o que pode ser melhorado. Encontrou algum erro no código? Comente também. Possui alguma outra opinião ou alguma informação adicional? Comenta ai! :)</p>
 
 </div>
 <div class="well span2">

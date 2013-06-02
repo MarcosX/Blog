@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Factory Method
+summary: Criando objetos on the fly com alta flexibilidade!
 ---
 
 Factory Method
@@ -120,7 +121,7 @@ public class FabricaFiat implements FabricaDeCarro {
 
 Ou seja, no final das contas teríamos a seguinte estrutura:
 
-![Diagrama UML Factory Method](http://brizeno.files.wordpress.com/2011/09/factory-method.png)
+<img src="http://brizeno.files.wordpress.com/2011/09/factory-method.png" class="img-polaroid" alt="Diagrama de classe Factory Method"/>
 
 Um pouco de teoria
 ------------------
@@ -130,13 +131,4 @@ Como vimos, a principal vantagem em utilizar o padrão Factory Method é a extre
 No entanto isto tem um custo. Perceba que criamos uma estrutura relativamente grande para resolver o pequeno problema, temos um conjunto grande de pequenas classes, cada uma realizando uma operação simples. Apesar de seguir o princípio da responsabilidade única, para cada novo produto precisamos sempre criar duas classes, uma produto e uma fábrica.
 
 Na primeira sugestão de implementação nós definimos o Factory Method em uma classe concreta, isso evita a criação de várias classes pequenas de fábrica, no entanto acaba criando um código gigante para criação de objetos. Durante a implementação é necessário escolher qual tipo de implementação resolve melhor o seu problema.
-
-Código fonte completo
----------------------
-
-O código completo pode ser baixado no seguinte repositório Git: https://github.com/MarcosX/Padr-es-de-Projeto.
-
-Os arquivos estão como um projeto do eclipse, então basta colocar no seu Workspace e fazer o import.
-
-Se gostou do post compartilhe com seus amigos e colegas, senão, comente o que pode ser melhorado. Encontrou algum erro no código? Comente também. Possui alguma outra opinião ou alguma informação adicional? Comenta ai! :)
 

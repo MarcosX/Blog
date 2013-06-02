@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Welcome
+title: Página inicial
 ---
 <div class='thumbnails'>
   <div class='span4'>
@@ -8,10 +8,7 @@ title: Welcome
     <article class='well'>
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <section>
-        <span class="label label-info">{{ post.date | date: "%B %e, %Y" }}</span>
-        {% for tag in post.tags %}
-        <span class="label label-success">{{ tag }}</span>
-        {% endfor %}
+        <p>{{ post.summary }}</p>
       </section>
     </article>
     {% endfor %}

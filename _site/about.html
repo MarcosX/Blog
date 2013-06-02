@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Arcanum | Hello World</title>
+    <title>Arcanum | Página inicial</title>
     <link href="/css/readable.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/solarized_light.css">
     <script src="/js/highlight.pack.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
@@ -13,19 +14,28 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Arcanum</a>
     <ul class="nav">
-      <li class="active"><a href="/">Home</a></li>
+      <li id="home"><a href="/">Home</a></li>
+      <li id="about"><a href="/about.html">Sobre</a></li>
     </ul>
   </div>
 </div>
 
-    <div style="padding-left:5%">
-    <div class="well span10">
-  
+<script>
+$( document ).ready(function() {
+    if(document.URL.match(/about/)){
+      $("#about").addClass("active");
+    } else {
+      $("#home").addClass("active");
+    }
+});
+</script>
 
-</div>
-<div class="well span2">
-  Anúncio
-</div>
+    <div style="padding-left:5%">
+    <h1>Arcanum</h1>
+
+Conhecimento é poder.
+
+Em construção
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="/js/bootstrap.min.js"></script>
