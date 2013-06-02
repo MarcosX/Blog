@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <title>{{ page.title }}</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/readable.min.css" rel="stylesheet">
   </head>
   <body>
     {% include navbar.html %}
+    <div style="padding-left:2%">
     {{ content }}
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <hr/>
+    </div>
   </body>
 </html>
